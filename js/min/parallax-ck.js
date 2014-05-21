@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#nav-home").click(function(){return $("html, body").animate({scrollTop:0},400),!1})});

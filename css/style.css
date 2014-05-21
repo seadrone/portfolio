@@ -1,0 +1,915 @@
+@charset "UTF-8";
+/**
+ * Typecsset
+ *
+ * Typecsset is a small, unopinionated library for creating beautifully set type
+ * on the web. Typecsset gives perfect vertical rhythm at any configurable font
+ * size, as well as many other typographical niceties.
+ */
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/**
+ * A lot of elements in Typecsset need to share some declarations (mainly for
+ * vertical rhythm), so we `@extend` some silent classes.
+ */
+h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+/**
+ * 1. Set the base element’s `font-size` to the value of your choosing. Set in
+ *    ems, assuming a browser default of 16px.
+ * 2. Work out the unitless `line-height` for your project based around your
+ *    desired `line-height` (defined previously in pixels), and your project’s
+ *    base font size.
+ */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [2] */ }
+
+body {
+  margin: 0; }
+
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333; }
+
+.alpha {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+
+.beta {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+.gamma {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+.delta {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+.epsilon {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+.zeta, .portfolio__content h2 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333; }
+
+.caps {
+  text-transform: uppercase; }
+
+.giga {
+  font-size: 64px;
+  font-size: 4rem;
+  line-height: 1.125; }
+
+.mega {
+  font-size: 56px;
+  font-size: 3.5rem;
+  line-height: 1.28571; }
+
+.kilo {
+  font-size: 52px;
+  font-size: 3.25rem;
+  line-height: 1.38462; }
+
+.smallprint, .portfolio__content span {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+
+.milli {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2; }
+
+.micro {
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 2.4; }
+
+.text--light {
+  font-weight: 300; }
+
+.text--dark {
+  font-weight: 600; }
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/*------------------------------------*\
+    #PARAGRAPHS
+\*------------------------------------*/
+/**
+ * Not strictly a paragraph, but probably doesn’t need its own section.
+ */
+/*------------------------------------*\
+    #CODE
+\*------------------------------------*/
+/**
+ * 1. Fix an odd quirk whereby, without this, code blocks are rendered at a
+ *    font-size smaller than 1em.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* [1] */ }
+
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+/**
+ * 1. Hang the opening quote of the blockquote.
+ */
+blockquote {
+  text-indent: -0.41em;
+  /* [1] */ }
+
+/**
+ * Set up quote marks on quoting elements. This is very English-based, so we are
+ * using “, ”, ‘, and ’ quotes.
+ */
+blockquote {
+  quotes: "“" "”";
+  margin-left: 48px;
+  margin-left: 3rem; }
+  blockquote p:before {
+    content: "“";
+    content: open-quote; }
+  blockquote p:after {
+    content: "";
+    content: no-close-quote; }
+  blockquote p:last-of-type:after {
+    content: "”";
+    content: close-quote; }
+
+q {
+  quotes: "‘" "’" "“" "”";
+  /**
+   * If an element opens with an inline quote, let’s hang that.
+   */ }
+  q:before {
+    content: "‘";
+    content: open-quote; }
+  q:after {
+    content: "’";
+    content: close-quote; }
+  q q:before {
+    content: "“";
+    content: open-quote; }
+  q q:after {
+    content: "”";
+    content: close-quote; }
+  q:first-child {
+    display: inline-block;
+    text-indent: -0.22em; }
+
+/*------------------------------------*\
+    #TABLES
+\*------------------------------------*/
+/**
+ * Crude table styles; tables are very difficult to keep on the baseline.
+ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th,
+td {
+  padding: 12px; }
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+/*
+ * Example uses:
+ *
+ * <div class="grid">
+ *     <div class="grid__cell unit-1-2"></div>
+ *     <div class="grid__cell unit-1-2"></div>
+ *     <div class="grid__cell unit-1-3"></div>
+ *     <div class="grid__cell unit-1-3"></div>
+ * </div>
+ *
+ * <div class="grid grid--center">
+ *     <div class="grid__cell unit-1-3"></div>
+ *     <div class="grid__cell unit-1-3"></div>
+ * </div>
+ */
+/* Grid core
+   ========================================================================== */
+/**
+ * Grid container
+ * Must only contain `.grid` or `.grid__cell` components as children.
+ *
+ * 1. Adjustment for child element margins.
+ * 2. Ensure consistent default alignment/
+ * 3. Remove inter-unit whitespace that appears between `inline-block` child
+ *    elements. Work for all non-monospace font-families.  If you're using a
+ *    monospace base font, you will need to set the `grid` font-family to
+ *   `sans-serif` and then redeclare the monospace font on the `grid__cell`
+ *    objects.
+ * 4. Protect against WebKit bug with optimizelegibility.
+ */
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0 -10px;
+  /* 1 */
+  text-align: left;
+  /* 2 */
+  letter-spacing: -0.31em;
+  /* 3 */
+  text-rendering: optimizespeed;
+  /* 4 */ }
+
+/**
+ * Opera hack
+ */
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+  /* 3 */ }
+
+/**
+ * Child `grid` object adjustments
+ * Used for more complex fixed-fluid hybrid grids.
+ */
+.grid > .grid {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0; }
+
+/**
+ * Grid units
+ * No explicit width by default. Apply `.unit-x-y` classes.
+ *
+ * 1. Fundamentals of the non-float grid layout mechanism.
+ * 2. Apply grid gutter.
+ * 3. Controls vertical positioning of units.
+ * 4. Keeps content correctly aligned with the grid direction.
+ * 5. Reset text defaults.
+ */
+.grid__cell {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  /* 1 */
+  margin: 0;
+  padding: 0 10px;
+  /* 2 */
+  vertical-align: top;
+  /* 3 */
+  text-align: left;
+  /* 4 */
+  letter-spacing: normal;
+  /* 5 */
+  word-spacing: normal;
+  /* 5 */
+  text-rendering: auto;
+  /* 5 */ }
+
+/* Grid modifiers
+   ========================================================================== */
+/**
+ * Modifier: horizontally center all grid units
+ * Allows for automatic unit centering irrespective of the number of
+ * units in the grid.
+ */
+.grid--center {
+  text-align: center; }
+
+/**
+ * Modifier: align horizontally all grid units to the left
+ */
+.grid--left {
+  text-align: left; }
+
+/**
+ * Modifier: align horizontally all grid units to the right
+ */
+.grid--right {
+  text-align: right; }
+
+/* Grid cell modifiers
+   ========================================================================== */
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+.grid__cell--center {
+  display: block;
+  margin: 0 auto; }
+
+/**
+ * Modifier: align horizontally one unit to the left
+ * Set a specific unit to be horizontally on the left. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+.grid__cell--left {
+  display: block;
+  margin-right: auto; }
+
+/**
+ * Modifier: align horizontally one unit to the right
+ * Set a specific unit to be horizontally on the right. Doesn't affect
+ * any other units. Can still contain a child `grid` object.
+ */
+.grid__cell--right {
+  display: block;
+  margin-left: auto; }
+
+/* Proportional units
+   ========================================================================== */
+/*
+ * Specify the proportional width of an object.
+ * Primarily for, but not limited to, use with `.grid__cell` components.
+ * Intentional redundancy build into each set of unit classes.
+ */
+.unit-1-2, .unit-2-4, .unit-6-12 {
+  width: 50%; }
+
+.unit-1-3, .unit-4-12 {
+  width: 33.33333%; }
+
+.unit-2-3, .unit-8-12 {
+  width: 66.66667%; }
+
+.unit-1-4, .unit-3-12 {
+  width: 25%; }
+
+.unit-3-4, .unit-9-12 {
+  width: 75%; }
+
+.unit-1-12 {
+  width: 8.33333%; }
+
+.unit-2-12 {
+  width: 16.66667%; }
+
+.unit-5-12 {
+  width: 41.66667%; }
+
+.unit-7-12 {
+  width: 58.33333%; }
+
+.unit-10-12 {
+  width: 83.33333%; }
+
+.unit-11-12 {
+  width: 91.66667%; }
+
+@media (min-width: 560px) {
+  /* Proportional units
+     ========================================================================== */
+  /*
+   * Specify the proportional width of an object.
+   * Primarily for, but not limited to, use with `.grid__cell` components.
+   * Intentional redundancy build into each set of unit classes.
+   */
+  .unit-1-2--desktop, .unit-2-4--desktop, .unit-6-12--desktop {
+    width: 50%; }
+
+  .unit-1-3--desktop, .unit-4-12--desktop {
+    width: 33.33333%; }
+
+  .unit-2-3--desktop, .unit-8-12--desktop {
+    width: 66.66667%; }
+
+  .unit-1-4--desktop, .unit-3-12--desktop {
+    width: 25%; }
+
+  .unit-3-4--desktop, .unit-9-12--desktop {
+    width: 75%; }
+
+  .unit-1-12--desktop {
+    width: 8.33333%; }
+
+  .unit-2-12--desktop {
+    width: 16.66667%; }
+
+  .unit-5-12--desktop {
+    width: 41.66667%; }
+
+  .unit-7-12--desktop {
+    width: 58.33333%; }
+
+  .unit-10-12--desktop {
+    width: 83.33333%; }
+
+  .unit-11-12--desktop {
+    width: 91.66667%; } }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: SofiaProLight, Helevetica, sans-serif !important;
+  color: #888888; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: SofiaProRegular, Helvetica, sans-serif;
+  color: #8a8a8a; }
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+.sans {
+  font-family: SofiaProLight, Helevetica, sans-serif; }
+
+.cta {
+  color: #fff;
+  font-family: SofiaProUltraLight, Helevetica, sans-serif; }
+
+@media (max-width: 562px) {
+  .small-hide {
+    display: none; } }
+
+.portfolio__item {
+  position: relative; }
+  .portfolio__item img {
+    width: 100%;
+    overflow: hidden;
+    position: relative; }
+
+.block-grid {
+  display: table;
+  width: 100%;
+  height: 100%;
+  border: none; }
+  @media (max-width: 700px) {
+    .block-grid {
+      align: center; } }
+
+.block-grid--content {
+  display: table-row;
+  text-align: left;
+  border: none; }
+  @media (max-width: 700px) {
+    .block-grid--content {
+      text-align: center; } }
+
+.portfolio__item {
+  display: inline-block !important;
+  width: 33.333333%; }
+  @media (max-width: 1000px) {
+    .portfolio__item {
+      width: 50%; } }
+  @media (max-width: 700px) {
+    .portfolio__item {
+      width: 80%;
+      margin: 0 auto !important; } }
+  @media (max-width: 500px) {
+    .portfolio__item {
+      width: 98%;
+      margin: 0 auto; } }
+
+.gr {
+  background-color: #556571; }
+
+.aq {
+  background-color: #09a799; }
+
+.pk {
+  background-color: #f3626a; }
+
+.gr2 {
+  background-color: #DADADA; }
+
+.or {
+  background-color: #de9747; }
+
+.portfolio__item:hover .portfolio__content {
+  opacity: .92; }
+
+.portfolio__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #2e6c8c;
+  height: 35%;
+  width: 100%;
+  text-align: left;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  padding: 0.5em;
+  color: #fff; }
+  @media (max-width: 1000px) {
+    .portfolio__content {
+      height: 35%; } }
+  .portfolio__content h2 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #fff;
+    text-align: left; }
+  .portfolio__content span {
+    text-align: left !important; }
+
+.sect-highlight {
+  background-color: #f3626a;
+  color: #fff;
+  padding-top: 1em; }
+
+.sect-muted {
+  background-color: #474e5b;
+  color: #fff; }
+
+.box {
+  background-color: #5d6778;
+  border-radius: 3px;
+  padding: 1em 0;
+  margin: 0 auto;
+  width: 500px; }
+
+.standout {
+  background-color: #2e6c8c;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-align: center;
+  font-family: SofiaProExtraLight, Helevetica, sans-serif; }
+
+.foo {
+  background-color: gray;
+  position: relative; }
+
+#services {
+  position: relative; }
+  #services h3 {
+    margin: 0;
+    padding: 0;
+    color: #2e6c8c; }
+
+.service {
+  vertical-align: middle;
+  padding-left: 1em; }
+  @media (max-width: 700px) {
+    .service {
+      width: 100% !important; } }
+
+#work {
+  position: relative;
+  background-color: #f2f6f8;
+  padding-bottom: 4em; }
+
+#contact {
+  z-index: 900; }
+
+.bar {
+  border: 1px solid red; }
+
+.pos--abs {
+  position: absolute; }
+
+.pos--rel {
+  position: relative; }
+
+.pos--fixed {
+  position: fixed; }
+
+.inline {
+  display: inline; }
+
+.float--right {
+  float: right !important; }
+
+.float--left {
+  float: left !important; }
+
+.float--none {
+  float: none !important; }
+
+/**
+ * Text alignment
+ */
+.text--left {
+  text-align: left  !important; }
+
+.text--center {
+  text-align: center !important; }
+
+.text--right {
+  text-align: right !important; }
+
+/**
+ * Font weights
+ */
+.weight--light {
+  font-weight: 300 !important; }
+
+.weight--normal {
+  font-weight: 400 !important; }
+
+.weight--semibold {
+  font-weight: 600 !important; }
+
+/**
+ * Add/remove margins
+ */
+.push {
+  margin: 1em !important; }
+
+.push--top {
+  margin-top: 1em !important; }
+
+.push--right {
+  margin-right: 1em !important; }
+
+.push--bottom {
+  margin-bottom: 1em !important; }
+
+.push--left {
+  margin-left: 1em !important; }
+
+.push--ends {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important; }
+
+.push--sides {
+  margin-right: 1em !important;
+  margin-left: 1em !important; }
+
+.push--big--bottom {
+  margin-bottom: 4em !important; }
+
+.push--big--ends {
+  margin-top: 4em !important;
+  margin-bottom: 1em !important; }
+
+.push-half {
+  margin: 0.5em !important; }
+
+.push-half--top {
+  margin-top: 0.5em !important; }
+
+.push-half--right {
+  margin-right: 0.5em !important; }
+
+.push-half--bottom {
+  margin-bottom: 0.5em !important; }
+
+.push-half--left {
+  margin-left: 0.5em !important; }
+
+.push-half--ends {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important; }
+
+.push-half--sides {
+  margin-right: 0.5em !important;
+  margin-left: 0.5em !important; }
+
+.flush {
+  margin: 0 !important; }
+
+.flush--top {
+  margin-top: 0 !important; }
+
+.flush--right {
+  margin-right: 0 !important; }
+
+.flush--bottom {
+  margin-bottom: 0 !important; }
+
+.flush--left {
+  margin-left: 0 !important; }
+
+.flush--ends {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.flush--sides {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+/**
+ * Add/remove paddings
+ */
+.soft {
+  padding: 1em !important; }
+
+.soft--top {
+  padding-top: 1em !important; }
+
+.soft--right {
+  padding-right: 1em !important; }
+
+.soft--bottom {
+  padding-bottom: 1em !important; }
+
+.soft--left {
+  padding-left: 1em !important; }
+
+.soft--ends {
+  padding-top: 1em !important;
+  padding-bottom: 1em !important; }
+
+.soft--sides {
+  padding-right: 1em !important;
+  padding-left: 1em !important; }
+
+.soft--big {
+  padding: 2.5em !important; }
+
+.soft--big--top {
+  padding-top: 2.5em !important; }
+
+.soft--big--right {
+  padding-right: 2.5em !important; }
+
+.soft--big--bottom {
+  padding-bottom: 2.5em !important; }
+
+.soft--big--left {
+  padding-left: 2.5em !important; }
+
+.soft--big--ends {
+  padding-top: 2.5em !important;
+  padding-bottom: 2.5em !important; }
+
+.soft--big--sides {
+  padding-right: 2.5em !important;
+  padding-left: 2.5em !important; }
+
+.soft--huge--sides {
+  padding-right: 6em !important;
+  padding-left: 6em !important; }
+
+.soft--huge--bottom {
+  padding-bottom: 6em !important; }
+
+.soft--hero {
+  padding-top: 8em;
+  padding-bottom: 1em; }
+
+.soft-half {
+  padding: 0.5em !important; }
+
+.soft-half--top {
+  padding-top: 0.5em !important; }
+
+.soft-half--right {
+  padding-right: 0.5em !important; }
+
+.soft-half--bottom {
+  padding-bottom: 0.5em !important; }
+
+.soft-half--left {
+  padding-left: 0.5em !important; }
+
+.soft-half--ends {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important; }
+
+.soft-half--sides {
+  padding-right: 0.5em !important;
+  padding-left: 0.5em !important; }
+
+.hard {
+  padding: 0 !important; }
+
+.hard--top {
+  padding-top: 0 !important; }
+
+.hard--right {
+  padding-right: 0 !important; }
+
+.hard--bottom {
+  padding-bottom: 0 !important; }
+
+.hard--left {
+  padding-left: 0 !important; }
+
+.hard--ends {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.hard--sides {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+.muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50) !important; }
+
+.muted--heavy {
+  opacity: 0.2 !important;
+  filter: alpha(opacity=50) !important; }
+
+.muted--light {
+  opacity: 0.8 !important;
+  filter: alpha(opacity=50) !important; }
+
+.proceed {
+  text-align: right !important; }
+
+.go:after {
+  content: "\00A0" "\00BB" !important; }
+
+.nav {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 24px;
+  text-align: right;
+  vertical-align: middle; }
+  @media (max-width: 700px) {
+    .nav {
+      text-align: center; } }
+
+.nav > ul {
+  padding: 0;
+  margin: 0;
+  vertical-align: middle; }
+
+.nav > ul > li {
+  display: inline-block; }
+  .nav > ul > li a {
+    color: #fff; }
+
+.nav > ul > li a:link,
+.nav > ul > li a:visited {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  text-transform: uppercase; }

@@ -1,0 +1,43 @@
+$base-spacing-unit: 1em;
+$half-spacing-unit: $base-spacing-unit/2;
+$padding: 1em;
+$brand-round: 3px;
+$color-blue: #2E6C8C;
+$color-blue-light: #3991C0;
+$color-pink: #f3626a;
+$font-sans:  SofiaProLight, Helevetica, sans-serif;
+$font-sans-heavy: SofiaProRegular, Helvetica, sans-serif;
+$font-sans-light:  SofiaProExtraLight, Helevetica, sans-serif;
+$font-sans-lighter:  SofiaProUltraLight, Helevetica, sans-serif;
+$font-serif: QuintURWT-Lig, serif;
+$body-font-color: #888888;
+$color-gray: #474e5b;
+
+@mixin breakpoint($point) {
+  @if $point == mid {
+    @media (max-width: 1000px) { @content; }
+  }
+  @else if $point == tween {
+    @media (max-width: 615px ) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 700px) { @content; }
+  }
+  @else if $point == hide {
+    @media (max-width: 562px) { @content; }
+  }
+  @else if $point == xsmall {
+    @media (max-width: 500px) { @content; }
+  }
+}
+
+
+
+// body copy
+// MuseoSansDisplay-Hairline
+// ProximaNova-Light
+// SofiaProUltraLight
+
+// Headings
+// 5d7f97
+// QuintURWT-Lig
