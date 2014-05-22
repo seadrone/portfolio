@@ -20,5 +20,24 @@ $(document).ready(function() {
     return false;
   });
 
+  // $("#headroom").headroom();
+
+  $("headroom").headroom({
+    "tolerance": 50,
+    "offset": 100,
+    "classes": {
+    "initial": "animated",
+    "pinned": "slideDown",
+    "unpinned": "slideUp",
+    "top": "headroom--top",
+    "notTop": "headroom--not-top"
+  }
+  });
+
+  // to destroy
+  $("#headroom").headroom("destroy");
+
+
+
 });
 
