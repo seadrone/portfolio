@@ -6,7 +6,6 @@
   @include griddle-build(2 3 4 12, '--desktop');
 }
 
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -32,11 +31,80 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
-.headroom--pinned {
-  width: 100%;
-  background-color: $color-pink;
-  opacity: .95;
+// .headroom--pinned {
+//   width: 100%;
+//   background-color: $color-pink;
+//   opacity: .95;
+//   top: 0;
+//   left: 0;
+//   position: fixed;
+//   padding-top: $padding;
+//   z-index: 1000;
+// }
+
+// .headroom {
+
+// }
+
+
+.headroom {
+  position: fixed;
+  background-color: $color-gray;
+  padding-top:$padding/2;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: .25s;
+  -o-transition: .25s;
+  -moz-transition: .25s;
+  -ms-transition: .25s;
+  transition: transform .25s ease-in-out;
 }
+.headroom--unpinned {
+  top: -108px;
+  -webkit-transition: .25s;
+  -o-transition: .25s;
+  -moz-transition: .25s;
+  -ms-transition: .25s;
+  transition: .25s;
+  -webkit-transform: translateY(-108px);
+  -o-transform: translateY(-108px);
+  -moz-transform: translateY(-108px);
+  -ms-transform: translateY(-108px);
+  transform: translateY(-108px);
+}
+
+.headroom--pinned {
+   top: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  transition: .5s;
+  opacity: .92;
+}
+
+
+.slide {
+-webkit-transition: all .25s ease-in-out;
+-moz-transition: all .25s ease-in-out;
+-o-transition: all .25s ease-in-out;
+transition: all .25s ease-in-out;
+}
+
+.slide--up {
+-webkit-transform: translateY(-100%);
+-ms-transform: translateY(-100%);
+transform: translateY(-100%);
+}
+
+.slide--reset {
+-webkit-transform: translateY(0);
+-ms-transform: translateY(0);
+transform: translateY(0);
+}
+
 
 figure {
   margin: 0;
@@ -144,9 +212,9 @@ figure {
 }
 
 .sect-highlight {
-  background-color: $color-pink;
+  background-color: $color-gray;
   color: #fff;
-  padding-top: $padding;
+  // padding-top: $padding;
 }
 
 .sect-muted {
@@ -187,6 +255,7 @@ figure {
 
 #services {
   position: relative;
+
   h3 {
     margin:0;
     padding: 0;
@@ -207,20 +276,6 @@ figure {
   }
 }
 
-
-
-#service-ux {
-
-}
-
-#service-ui {
-
-}
-
-#service-branding {
-
-}
-
 #work {
   position: relative;
   background-color: #f2f6f8;
@@ -231,30 +286,7 @@ figure {
   z-index: 900;
 }
 
-// #images {
-//   position: fixed;
-//   top:0;
-//   width: 100%;
-//   z-index: 200;
-// }
 
-// #img-ux {
-//   position: absolute;
-//   top: 1500px;
-//   left: 50%;
-// }
-
-// #img-ui {
-//   position: absolute;
-//   top: 2000px;
-//   left: 50%;
-// }
-
-// #img-branding {
-//   position: absolute;
-//   left: 50%;
-//   top: 2500px;
-// }
 
 // ========================  HELPER OBJECTS
 .bar { border: 1px solid red; }
@@ -343,7 +375,9 @@ figure {
 .soft--big--ends     { padding-top:   2.5 * $base-spacing-unit!important; padding-bottom:2.5*$base-spacing-unit!important; }
 .soft--big--sides    { padding-right: 2.5 * $base-spacing-unit!important; padding-left:  2.5*$base-spacing-unit!important; }
 
-.soft--huge--sides    { padding-right: 6 * $base-spacing-unit!important; padding-left:  6*$base-spacing-unit!important; }
+.soft--huge--ends    { padding-bottom: 5 * $base-spacing-unit!important; padding-top:  5*$base-spacing-unit!important; }
+.soft--big--ends     { padding-top:   5 * $base-spacing-unit!important; padding-bottom:5*$base-spacing-unit!important; }
+
 
 .soft--huge--bottom {
   padding-bottom: 6 * $base-spacing-unit!important;
@@ -426,14 +460,12 @@ figure {
    padding:  $padding;
    text-decoration: none;
    text-transform: uppercase;
+   @include breakpoint(xsmall) {
+    @include typecsset-font-size(14px);
+   }
 }
 
 
-.headroom--pinned {
-  position: fixed;
-  display: inline-block;
-  z-index: 900;
-}
 
 
 

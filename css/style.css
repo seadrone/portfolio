@@ -482,10 +482,44 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 960px;
   margin: 0 auto; }
 
+.headroom {
+  position: fixed;
+  background-color: #474e5b;
+  padding-top: 0.5em;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: .25s;
+  transition: transform .25s ease-in-out; }
+
+.headroom--unpinned {
+  top: -108px;
+  -webkit-transition: .25s;
+  transition: .25s;
+  -webkit-transform: translateY(-108px);
+  -ms-transform: translateY(-108px);
+  transform: translateY(-108px); }
+
 .headroom--pinned {
-  width: 100%;
-  background-color: #f3626a;
-  opacity: .95; }
+  top: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: .92; }
+
+.slide {
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out; }
+
+.slide--up {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+.slide--reset {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0); }
 
 figure {
   margin: 0;
@@ -590,9 +624,8 @@ figure {
     text-align: left !important; }
 
 .sect-highlight {
-  background-color: #f3626a;
-  color: #fff;
-  padding-top: 1em; }
+  background-color: #474e5b;
+  color: #fff; }
 
 .sect-muted {
   background-color: #474e5b;
@@ -824,9 +857,13 @@ figure {
   padding-right: 2.5em !important;
   padding-left: 2.5em !important; }
 
-.soft--huge--sides {
-  padding-right: 6em !important;
-  padding-left: 6em !important; }
+.soft--huge--ends {
+  padding-bottom: 5em !important;
+  padding-top: 5em !important; }
+
+.soft--big--ends {
+  padding-top: 5em !important;
+  padding-bottom: 5em !important; }
 
 .soft--huge--bottom {
   padding-bottom: 6em !important; }
@@ -925,8 +962,9 @@ figure {
   padding: 1em;
   text-decoration: none;
   text-transform: uppercase; }
-
-.headroom--pinned {
-  position: fixed;
-  display: inline-block;
-  z-index: 900; }
+  @media (max-width: 500px) {
+    .nav > ul > li a:link,
+    .nav > ul > li a:visited {
+      font-size: 14px;
+      font-size: 0.875rem;
+      line-height: 1.71429; } }
