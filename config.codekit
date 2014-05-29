@@ -66,6 +66,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/branding@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30325,
+		"inputAbbreviatedPath": "\/img\/branding@2x.png",
+		"outputAbbreviatedPath": "\/img\/branding@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/jottly.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -110,6 +121,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/line.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 958,
+		"inputAbbreviatedPath": "\/img\/line.jpg",
+		"outputAbbreviatedPath": "\/img\/line.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -117,6 +139,17 @@
 		"initialSize": 9760,
 		"inputAbbreviatedPath": "\/img\/logo.png",
 		"outputAbbreviatedPath": "\/img\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23323,
+		"inputAbbreviatedPath": "\/img\/logo@2x.png",
+		"outputAbbreviatedPath": "\/img\/logo@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -154,6 +187,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/uiDesign.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7878,
+		"inputAbbreviatedPath": "\/img\/uiDesign.png",
+		"outputAbbreviatedPath": "\/img\/uiDesign.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/uiDesign@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 21538,
+		"inputAbbreviatedPath": "\/img\/uiDesign@2x.png",
+		"outputAbbreviatedPath": "\/img\/uiDesign@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/ux.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -161,6 +216,28 @@
 		"initialSize": 6585,
 		"inputAbbreviatedPath": "\/img\/ux.png",
 		"outputAbbreviatedPath": "\/img\/ux.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/uxDesign.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9775,
+		"inputAbbreviatedPath": "\/img\/uxDesign.png",
+		"outputAbbreviatedPath": "\/img\/uxDesign.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/uxDesign@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26236,
+		"inputAbbreviatedPath": "\/img\/uxDesign@2x.png",
+		"outputAbbreviatedPath": "\/img\/uxDesign@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -271,12 +348,12 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/waypoints.min.js": {
+	"\/js\/skrollr.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/waypoints.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/waypoints.min-ck.js",
+		"inputAbbreviatedPath": "\/js\/skrollr.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/skrollr.min-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

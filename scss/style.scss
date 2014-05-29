@@ -27,29 +27,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
-// .headroom--pinned {
-//   width: 100%;
-//   background-color: $color-pink;
-//   opacity: .95;
-//   top: 0;
-//   left: 0;
-//   position: fixed;
-//   padding-top: $padding;
-//   z-index: 1000;
-// }
-
-// .headroom {
-
-// }
-
+.full { width: 100%; }
 
 .headroom {
   position: fixed;
-  background-color: $color-gray;
+  background-color: $color-blue;
   padding-top:$padding/2;
   z-index: 9998;
   top: 0;
@@ -82,9 +68,11 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition: .5s;
   -ms-transition: .5s;
   transition: .5s;
-  opacity: .92;
+  opacity: .88;
 }
 
+.va { vertical-align: middle!important; 
+  top:50%!important;}
 
 .slide {
 -webkit-transition: all .25s ease-in-out;
@@ -120,7 +108,7 @@ figure {
 
 .small-hide {
   @include breakpoint(hide) {
-    display: none;
+    display: none!important;
   }
 }
 // ========================  IMAGE GRID
@@ -212,13 +200,18 @@ figure {
 }
 
 .sect-highlight {
-  background-color: $color-gray;
+  background-color: $color-blue;
   color: #fff;
-  // padding-top: $padding;
+  h1 {
+    @include breakpoint(small) {
+    padding-top:$padding!important;
+    padding-bottom:$padding!important;
+  }
+  }
 }
 
 .sect-muted {
-  background-color: $color-gray;
+  background-color: $color-blue;
   color: #fff;
 }
 
@@ -235,7 +228,7 @@ figure {
 }
 
 .standout {
-  background-color: $color-blue;
+  background-color: $color-bluer;
   color: #fff;
   display:inline-block;
   padding: $padding/2 $padding;
@@ -263,18 +256,91 @@ figure {
   }
 }
 
+#services-wrap {
+  position: relative;
+}
+
 
 .service {
   vertical-align: middle;
   padding-left: $padding;
+  // margin: $padding*4 0;
   @include breakpoint(small) {
     width: 100%!important;
+    text-align:left;
   }
   p {
-    @extend .delta;
+    @extend .epsilon;
     line-height: 1.4;
   }
 }
+
+.bubble {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: 12px solid lighten($color-gray, 20%);
+  background-color: lighten($color-gray, 50%);
+  text-align: center;
+  margin: 0 auto;
+
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+
+  to {
+   opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.deanimate {
+  transition: 1.5s ease-in-out;
+
+  animation: fadeOut ease-in;
+
+  animation-fill-mode: forwards;
+
+  animation-duration: 1s;
+}
+
+.animate {
+  transition: 1.5s ease-in-out;
+
+  animation: fadeIn ease-in;
+
+  animation-fill-mode: forwards;
+
+  animation-duration: 1s;
+}
+
+#service-ux.animate { transform: translate(250px, 300px); }
+// #service-ux.deanimate { transform: translate(-250px, -300px); }
+
+
+#service-ui.animate { transform: translate(-200px, 250px); }
+// #service-ui.deanimate { transform: translate( 200px, -250px ); }
+
+
+#service-branding.animate { transform: translate(0, 250px); }
+// #service-branding.deanimate { transform: translate(0, -250px); }
+
+
+
+.vl {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+
 
 #work {
   position: relative;
@@ -334,6 +400,14 @@ figure {
 .push--ends     { margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
 .push--sides    { margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
 
+.push--bigger--bottom   { 
+  margin-bottom:6*$base-spacing-unit; 
+  @include breakpoint(small) {
+    margin-bottom: 2*$base-spacing-unit;
+  }
+
+}
+
 .push--big--bottom   { margin-bottom:4*$base-spacing-unit!important; }
 .push--big--ends   { 
   margin-top:4*$base-spacing-unit!important;
@@ -380,7 +454,7 @@ figure {
 
 
 .soft--huge--bottom {
-  padding-bottom: 6 * $base-spacing-unit!important;
+  padding-bottom: 6 * $base-spacing-unit;
 }
 
 .soft--hero {

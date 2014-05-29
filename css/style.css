@@ -88,12 +88,12 @@ h6 {
   font-size: 1.875rem;
   line-height: 1.6; }
 
-.delta, .service p {
+.delta {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
 
-.epsilon {
+.epsilon, .service p {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2; }
@@ -472,19 +472,22 @@ html {
 
 body {
   font-family: SofiaProLight, Helevetica, sans-serif !important;
-  color: #888888; }
+  color: #5f5f5f; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: SofiaProRegular, Helvetica, sans-serif;
   color: #8a8a8a; }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 auto; }
+
+.full {
+  width: 100%; }
 
 .headroom {
   position: fixed;
-  background-color: #474e5b;
+  background-color: #5e9ac3;
   padding-top: 0.5em;
   z-index: 9998;
   top: 0;
@@ -505,7 +508,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   -webkit-transition: .5s;
   transition: .5s;
-  opacity: .92; }
+  opacity: .88; }
+
+.va {
+  vertical-align: middle !important;
+  top: 50% !important; }
 
 .slide {
   -webkit-transition: all .25s ease-in-out;
@@ -534,7 +541,7 @@ figure {
 
 @media (max-width: 562px) {
   .small-hide {
-    display: none; } }
+    display: none !important; } }
 
 .portfolio__item {
   position: relative; }
@@ -598,7 +605,7 @@ figure {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: #2e6c8c;
+  background-color: #5e9ac3;
   height: 35%;
   width: 100%;
   text-align: left;
@@ -624,11 +631,15 @@ figure {
     text-align: left !important; }
 
 .sect-highlight {
-  background-color: #474e5b;
+  background-color: #5e9ac3;
   color: #fff; }
+  @media (max-width: 700px) {
+    .sect-highlight h1 {
+      padding-top: 1em !important;
+      padding-bottom: 1em !important; } }
 
 .sect-muted {
-  background-color: #474e5b;
+  background-color: #5e9ac3;
   color: #fff; }
 
 .box {
@@ -642,7 +653,7 @@ figure {
   position: relative; }
 
 .standout {
-  background-color: #2e6c8c;
+  background-color: #4482ac;
   color: #fff;
   display: inline-block;
   padding: 0.5em 1em;
@@ -662,16 +673,95 @@ figure {
   #services h3 {
     margin: 0;
     padding: 0;
-    color: #2e6c8c; }
+    color: #5e9ac3; }
+
+#services-wrap {
+  position: relative; }
 
 .service {
   vertical-align: middle;
   padding-left: 1em; }
   @media (max-width: 700px) {
     .service {
-      width: 100% !important; } }
+      width: 100% !important;
+      text-align: left; } }
   .service p {
     line-height: 1.4; }
+
+.bubble {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: 12px solid #757f93;
+  background-color: #cbcfd6;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 0; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+.deanimate {
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  -webkit-animation: fadeOut ease-in;
+  animation: fadeOut ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+
+.animate {
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  -webkit-animation: fadeIn ease-in;
+  animation: fadeIn ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }
+
+#service-ux.animate {
+  -webkit-transform: translate(250px, 300px);
+  -ms-transform: translate(250px, 300px);
+  transform: translate(250px, 300px); }
+
+#service-ui.animate {
+  -webkit-transform: translate(-200px, 250px);
+  -ms-transform: translate(-200px, 250px);
+  transform: translate(-200px, 250px); }
+
+#service-branding.animate {
+  -webkit-transform: translate(0, 250px);
+  -ms-transform: translate(0, 250px);
+  transform: translate(0, 250px); }
+
+.vl {
+  position: absolute;
+  left: 50%;
+  top: 10%; }
 
 #work {
   position: relative;
@@ -754,6 +844,12 @@ figure {
 .push--sides {
   margin-right: 1em !important;
   margin-left: 1em !important; }
+
+.push--bigger--bottom {
+  margin-bottom: 6em; }
+  @media (max-width: 700px) {
+    .push--bigger--bottom {
+      margin-bottom: 2em; } }
 
 .push--big--bottom {
   margin-bottom: 4em !important; }
@@ -866,7 +962,7 @@ figure {
   padding-bottom: 5em !important; }
 
 .soft--huge--bottom {
-  padding-bottom: 6em !important; }
+  padding-bottom: 6em; }
 
 .soft--hero {
   padding-top: 8em;

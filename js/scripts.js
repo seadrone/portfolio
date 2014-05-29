@@ -20,22 +20,16 @@ $(document).ready(function() {
     return false;
   });
 
+  // $("#headroom").headroom();
 
-  $("#headroom").headroom();
+  $("#headroom").headroom({
+    "tolerance": 10,
+    "offset": 450
+    });
 
-// (function() {
-//     var header = new Headroom(document.querySelector("#headroom"), {
-//         tolerance: 5,
-//         offset : 205,
-//         classes: {
-//           initial: "animated",
-//           pinned: "slideDown",
-//           unpinned: "slideUp"
-//         }
-//     });
-//     header.init();
+  // to destroy
+  $("#header").headroom("destroy");
 
-// }());
 
 
 });
