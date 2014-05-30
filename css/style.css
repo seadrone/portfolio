@@ -88,7 +88,7 @@ h6 {
   font-size: 1.875rem;
   line-height: 1.6; }
 
-.delta, .email {
+.delta {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
@@ -642,10 +642,12 @@ figure {
   background-color: #4a5863;
   color: #fff; }
 
-.email {
-  color: #fff;
-  text-decoration: none;
-  text-transform: lowercase; }
+.cnt-link {
+  opacity: .5; }
+  .cnt-link:hover {
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    opacity: 1; }
 
 .box {
   background-color: #607280;

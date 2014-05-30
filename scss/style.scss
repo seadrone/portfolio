@@ -215,11 +215,12 @@ figure {
   color: #fff;
 }
 
-.email {
-  color: #fff;
-  text-decoration: none;
-  @extend .delta;
-  text-transform: lowercase;
+.cnt-link {
+  opacity: .5;
+  &:hover {
+    transition: opacity .2s ease-in-out;
+    opacity: 1;
+  }
 }
 
 .box {
