@@ -3,18 +3,19 @@ $half-spacing-unit: $base-spacing-unit/2;
 $padding: 1em;
 $brand-round: 3px;
 
-$color-blue: #5e9ac3;
-$color-bluer: #4482AC;
+$color-blue: #398FC2;
+$color-bluer: #4688AF;
 $color-blue-light: #3991C0;
-$color-pink: #f3626a;
-$color-gray: #474e5b;
+$color-pink: #FD6C74;
+$color-pinker: #E6555D;
+$color-gray: #4A5863;
 
 $font-sans:  SofiaProLight, Helevetica, sans-serif;
 $font-sans-heavy: SofiaProRegular, Helvetica, sans-serif;
 $font-sans-light:  SofiaProExtraLight, Helevetica, sans-serif;
 $font-sans-lighter:  SofiaProUltraLight, Helevetica, sans-serif;
 $font-serif: QuintURWT-Lig, serif;
-$body-font-color: #5f5f5f;
+$body-font-color: #787878;
 
 @mixin breakpoint($point) {
   @if $point == mid {

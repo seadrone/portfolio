@@ -83,12 +83,12 @@ h6 {
   font-size: 2.25rem;
   line-height: 1.33333; }
 
-.gamma {
+.gamma, .standout {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.6; }
 
-.delta {
+.delta, .email {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
@@ -472,7 +472,7 @@ html {
 
 body {
   font-family: SofiaProLight, Helevetica, sans-serif !important;
-  color: #5f5f5f; }
+  color: #787878; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: SofiaProRegular, Helvetica, sans-serif;
@@ -487,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .headroom {
   position: fixed;
-  background-color: #5e9ac3;
+  background-color: #fd6c74;
   padding-top: 0.5em;
   z-index: 9998;
   top: 0;
@@ -605,7 +605,7 @@ figure {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: #5e9ac3;
+  background-color: #fd6c74;
   height: 35%;
   width: 100%;
   text-align: left;
@@ -631,7 +631,7 @@ figure {
     text-align: left !important; }
 
 .sect-highlight {
-  background-color: #5e9ac3;
+  background-color: #fd6c74;
   color: #fff; }
   @media (max-width: 700px) {
     .sect-highlight h1 {
@@ -639,11 +639,16 @@ figure {
       padding-bottom: 1em !important; } }
 
 .sect-muted {
-  background-color: #5e9ac3;
+  background-color: #4a5863;
   color: #fff; }
 
+.email {
+  color: #fff;
+  text-decoration: none;
+  text-transform: lowercase; }
+
 .box {
-  background-color: #5d6778;
+  background-color: #607280;
   border-radius: 3px;
   padding: 1em 0;
   margin: 0 auto;
@@ -653,8 +658,9 @@ figure {
   position: relative; }
 
 .standout {
-  background-color: #4482ac;
+  background-color: #e6555d;
   color: #fff;
+  border: 2px solid #DB5555;
   display: inline-block;
   padding: 0.5em 1em;
   text-transform: uppercase;
@@ -673,7 +679,7 @@ figure {
   #services h3 {
     margin: 0;
     padding: 0;
-    color: #5e9ac3; }
+    color: #4688af; }
 
 #services-wrap {
   position: relative; }
@@ -692,8 +698,8 @@ figure {
   width: 70px;
   height: 70px;
   border-radius: 100%;
-  border: 12px solid #757f93;
-  background-color: #cbcfd6;
+  border: 12px solid #798c9a;
+  background-color: #d0d7dc;
   text-align: center;
   margin: 0 auto;
   opacity: 0; }

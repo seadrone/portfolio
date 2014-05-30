@@ -77,6 +77,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/dribbble.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3259,
+		"inputAbbreviatedPath": "\/img\/dribbble.png",
+		"outputAbbreviatedPath": "\/img\/dribbble.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/email.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1188,
+		"inputAbbreviatedPath": "\/img\/email.png",
+		"outputAbbreviatedPath": "\/img\/email.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/email@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2521,
+		"inputAbbreviatedPath": "\/img\/email@2x.png",
+		"outputAbbreviatedPath": "\/img\/email@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/jottly.png": {
 		"fileType": 32768,
 		"ignore": 0,

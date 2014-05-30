@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .headroom {
   position: fixed;
-  background-color: $color-blue;
+  background-color: $color-pink;
   padding-top:$padding/2;
   z-index: 9998;
   top: 0;
@@ -172,7 +172,7 @@ figure {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: $color-blue;
+  background-color: $color-pink;
   height: 35%;
   @include breakpoint(mid) {
     height: 35%;
@@ -200,7 +200,7 @@ figure {
 }
 
 .sect-highlight {
-  background-color: $color-blue;
+  background-color: $color-pink;
   color: #fff;
   h1 {
     @include breakpoint(small) {
@@ -211,8 +211,15 @@ figure {
 }
 
 .sect-muted {
-  background-color: $color-blue;
+  background-color: $color-gray;
   color: #fff;
+}
+
+.email {
+  color: #fff;
+  text-decoration: none;
+  @extend .delta;
+  text-transform: lowercase;
 }
 
 .box {
@@ -228,8 +235,10 @@ figure {
 }
 
 .standout {
-  background-color: $color-bluer;
+  background-color: $color-pinker;
   color: #fff;
+  @extend .gamma;
+  border: 2px solid #DB5555;
   display:inline-block;
   padding: $padding/2 $padding;
   text-transform: uppercase;
@@ -252,7 +261,7 @@ figure {
   h3 {
     margin:0;
     padding: 0;
-    color: $color-blue;
+    color: $color-bluer;
   }
 }
 
